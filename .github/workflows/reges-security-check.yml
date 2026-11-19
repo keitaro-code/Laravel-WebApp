@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '24'
-      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm install --ignore-scripts --no-package-lock --no-audit --no-fund
       - run: npm run production
       - run: composer install --prefer-dist --no-interaction
       - name: Laravel regression tests
